@@ -1,5 +1,4 @@
 #angular repeat-inside
-=====================
 
 repeat-inside allows you to repeat the children of an element, using the same loop expressions you'd use in a normal ng-repeat.
 
