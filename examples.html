@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>repeatInside test</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+		<script src="repeatInside.js"></script>
+	</head>
+	<body ng-app="myApp" ng-controller="myController">
+		<dl repeat-inside="word in dict">
+			<dt>{{word.name}}</dt>
+			<dd>{{word.description}} <a href="#" ng-click="removeAtIndex(index)">remove</a></dd>
+		</dl>
+	</body>
+	<script>
+	myApp = angular.module("myApp", ["bigblind"])
+	
+	myController = function($scope){
+		$scope.dict = [
+			{name:"angular", description:"hero javascript framework"},
+			{name:"jQuery", description:"DOM made easy."}
+		];
+		
+		$scope.removeAtIndex = function(index){
+			$scope.dict.splice(0,1);
+			console.log("----------------");
+			console.log($scope.dict);
+		}
+	}
+	</script>
+
+</html>
