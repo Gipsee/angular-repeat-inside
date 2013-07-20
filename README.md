@@ -4,7 +4,7 @@ repeat-inside allows you to repeat the children of an element, using the same lo
 
 To get started, add the `bigblind` module as a dependency to your app.
 
-    myap = angular.module("myapp", ["bigblind"]);
+    myapp = angular.module("myapp", ["bigblind"]);
 
 you can iterate over lists. Imagine for example your scope contains a list called `words` with object elements, each having a `name` and a `description`
 
