@@ -6,7 +6,7 @@ bigblind.directive("repeatInside", function(){
         var childScope = scope.$new();
         childScope.index = index;
         if (keyIdentifier) {
-            childScope[keyIdentifier] = index;
+            childScope[keyIdentifier] = key;
         }
         childScope[valIdentifier] = val;
         childScope.first = (index === 0);
