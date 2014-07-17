@@ -19,7 +19,7 @@ You can also iterate over objects. Let's say your `words` collection  is now an 
 
 
 ```
-<dl repeat-inside="(word, definition)">
+<dl repeat-inside="(word, definition) in words">
     <dt>{{word}}</dt>
     <dd>{{definition}}</dd>
 </dl>
