@@ -1,6 +1,5 @@
-bigblind = window.bigblind || angular.module("bigblind",[]);
-
-bigblind.directive("bbRepeatInside", function(){
+bigblind = angular.module("bigblind", []);
+angular.module("bigblind").directive("bbRepeatInside", function(){
     "use strict";
     var linkIt = function(scope, $element, index, key, val, keyIdentifier, valIdentifier, transclude){
         var childScope = scope.$new();
@@ -19,7 +18,8 @@ bigblind.directive("bbRepeatInside", function(){
         transclude:true,
         compile: function(element, attrs, transclude){
             return function($scope, $element, $attr){
-                var expression = $attr.repeatInside;
+                var expression = $attr.bbRepeatInside;
+              console.log($attr);
                 var match = expression.match(/^\s*(.+)\s+in\s+(.*?)$/);
                 var lhs, rhs;
                 var keyIdentifier, valIdentifier, hashFnLocals = {};
