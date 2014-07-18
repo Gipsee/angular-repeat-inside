@@ -7,7 +7,7 @@
 	</head>
 	<body ng-app="myApp" ng-controller="myController">
 		<h2>Iterating over a list</h2>
-		<dl repeat-inside="word in dict">
+		<dl bb-repeat-inside="word in dict">
 			<dt>{{word.name}}</dt>
 			<dd>{{word.description}} <a href="#" ng-click="removeAtIndex(index)">remove</a></dd>
 		</dl>
@@ -17,7 +17,7 @@
 		<h2>Iterating over an object</h2>
 		<div style="border:2px ridge black;background-color:#DDD;padding:20px;">
 			<h3>Price List</h3>
-			<div repeat-inside="(product, price) in prices">
+			<div bb-repeat-inside="(product, price) in prices">
 				<strong ng-bind="product" style="width:100px;display:inline-block;"></strong> {{price | currency}}<br>
 			</div>
 		</div>

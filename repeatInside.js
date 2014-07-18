@@ -1,6 +1,6 @@
 bigblind = window.bigblind || angular.module("bigblind",[]);
 
-bigblind.directive("repeatInside", function(){
+bigblind.directive("bbRepeatInside", function(){
     "use strict";
     var linkIt = function(scope, $element, index, key, val, keyIdentifier, valIdentifier, transclude){
         var childScope = scope.$new();
